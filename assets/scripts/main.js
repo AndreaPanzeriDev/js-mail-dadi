@@ -36,3 +36,65 @@ function Research(){
     }
 
 }
+
+
+
+
+
+
+//player array
+let arrayPlayer = [];
+//computer array
+let arrayComputer = [];
+
+
+//output player
+document.getElementById("playerpointOutput").innerHTML = arrayPlayer.length;
+//output Computer
+document.getElementById("computerpointOutput").innerHTML = arrayComputer.length;
+
+
+
+function Play(){
+    //player
+    let numberPlayer = Math.round(Math.random() * 6);
+    console.log("numero giocatore: ", numberPlayer);
+    //computer
+    let numberComputer = Math.round(Math.random() * 6);
+    console.log("numero computer: ", numberComputer);
+
+
+    //control who is the winner
+    if(numberPlayer > numberComputer){
+        console.log("giocatore vince");
+        alert("HAI VINTO");
+        arrayPlayer.push("vittoria");
+        console.log(arrayPlayer);
+    }else{
+        console.log("giocatore perde");
+        alert("HAI PERSO");
+        arrayComputer.push("vittoria");
+        console.log(arrayComputer);
+    }
+
+
+
+    //output player
+    document.getElementById("playerpointOutput").innerHTML = arrayPlayer.length;
+    //output Computer
+    document.getElementById("computerpointOutput").innerHTML = arrayComputer.length;
+
+}
+
+
+//Reset point
+
+function Reset(){
+    arrayPlayer = [];
+    arrayComputer = [];
+
+    //output player
+    document.getElementById("playerpointOutput").innerHTML = arrayPlayer.length;
+    //output Computer
+    document.getElementById("computerpointOutput").innerHTML = arrayComputer.length;
+}

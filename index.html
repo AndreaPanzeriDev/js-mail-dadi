@@ -1,25 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>MailDadi</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="assets/css/style.css" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    </head>
-    <body>
-        <!--Mail-->
-        <section>
-            <form class="container" action="">
-                <label class="fs-3">Inserisci la tua email</label>
-                <input type="text" id="inputMail">
-                <button onclick ="Research();return false">Cerca</button>
-                <p id="outputResult"></p>
 
-            </form>
-        </section>
+<head>
+    <title>MailDadi</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="assets/scripts/main.js"></script>
-    </body>
+<body>
+    <!--Mail-->
+    <section>
+        <form class="container" action="">
+            <label class="fs-3">Inserisci la tua email</label>
+            <!--Input-->
+            <input type="text" id="inputMail">
+            <button onclick="Research();return false">Cerca</button>
+            <!--Output-->
+            <p id="outputResult"></p>
+        </form>
+    </section>
+
+    <!--Dice Game-->
+    <section id="dice">
+        <form action="" class="container">
+            <div class="fs-1">Gioco dei dadi</div>
+            <div class="fs-4 fst-italic">Istruzioni</div>
+            <!--Info about the game-->
+            <p>Premere il pulsante inizio per tirare i dati che ottiene il numero più alto vince il round</p>
+            <div class="d-flex">
+                <!--Play button-->
+                <button onclick="Play();return false">Play</button>
+                <!--Reset button-->
+                <button class="ms-5" onclick="Reset();return false">Reset</button>
+            </div>
+
+
+
+            <!--Points-->
+            <div class="fs-1 mt-3">Punteggio</div>
+            <div class="d-flex">
+                <div class="fs-3">Utente: </div>
+                <div class="fs-3 ms-5" id="playerpointOutput"></div>
+            </div>
+            <div class="d-flex">
+                <div class="fs-3">Computer: </div>
+                <div class="fs-3 ms-5" id="computerpointOutput"></div>
+            </div>
+        </form>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/scripts/main.js"></script>
+</body>
+
 </html>
