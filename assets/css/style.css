@@ -3,3 +3,24 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+
+/*Container*/
+.container{
+    width: 80%;
+    margin: auto;
+    margin-top: 3%;
+}
+
+
+
+/*Button and animation in hover*/
+button{
+    padding: 5px 15px 5px 15px;
+    background-color: rgb(62, 201, 201);
+    border: none;
+}
+
+button:hover{
+    background-color: rgb(49, 161, 161);;
+}
